@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: linear-gradient(
+    to top right,
+    hsl(240, 73%, 65%),
+    hsl(273, 75%, 66%)
+  );
+  font-size: 12px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 83vh;
+}
+
+.container {
+  background-image: url("images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  margin: 7rem 15rem;
+  height: 64vh;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.wrapper {
+  display: flex;
+}
+
+#cube {
+  width: 90%;
+  position: relative;
+  top: 7rem;
+  left: -4rem;
+  z-index: 1;
+}
+
+#woman {
+  width: 27%;
+  position: absolute;
+  top: 8rem;
+  left: 14rem;
+}
+
+.right {
+  position: relative;
+  top: 1rem;
+  left: 15rem;
+}
+
+h1 {
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+  padding-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.text {
+  border-bottom: 1px solid grey;
+  font-size: 12px;
+}
+
+.accordion {
+  position: relative;
+  margin: 0.8rem 0.3rem;
+}
+
+.label {
+  position: relative;
+  padding: 0.2rem;
+  color: hsl(237, 12%, 33%);
+  cursor: pointer;
+}
+
+h3 {
+  transition: all 0.3s ease;
+}
+
+h3:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.accordion .label::before {
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+}
+
+.answer {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+}
+
+.accordion.active .answer {
+  height: 150px;
+  padding: 10px;
+}
+
+.question.active .answer {
+  height: 150px;
+  padding: 10px;
+}
+
+.active,
+label:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+p {
+  color: hsl(240, 6%, 50%);
+  margin-top: -1rem;
+  margin-left: 0.5rem;
+}
+
+.right img {
+  position: relative;
+  left: 17rem;
+  top: -1rem;
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 5rem 3rem;
+    height: 72vh;
+    width: 85vw;
+  }
+
+  #woman {
+    width: 31%;
+    top: 10rem;
+    left: 3rem;
+  }
+
+  .right {
+    left: 5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    background-repeat: repeat;
+    height: 133vh;
+  }
+
+  .container {
+    margin: 6rem 3rem;
+    height: 140vh;
+    width: 131vw;
+  }
+
+  .wrapper {
+    display: block;
+  }
+
+  #cube {
+    width: 19%;
+    top: -1rem;
+    left: 10rem;
+  }
+
+  #woman {
+    width: 60%;
+    top: 0rem;
+    left: 13rem;
+  }
+
+  .right {
+    top: 1rem;
+  }
+
+  .right img {
+    left: 24rem;
+    top: -1.5rem;
+  }
+
+  h1 {
+    padding-bottom: 2.5rem;
+    font-size: 36px;
+    margin-left: 8rem;
+  }
+
+  .accordion {
+    font-size: 17px;
+  }
+
+  p {
+    margin-left: -0.5rem;
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .accordion {
+    margin: 0.8rem -1.7rem;
+  }
+
+  .right img {
+    left: 23rem;
+    top: -1.5rem;
+  }
+
+  .accordion.active .answer {
+    height: 0;
+    padding: 2rem 1rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .right {
+    left: 3.5rem;
+  }
+
+  .right img {
+    left: 23rem;
+  }
+}
